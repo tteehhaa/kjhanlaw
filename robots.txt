@@ -1,4 +1,4 @@
-# robots.txt — 한경재 법률사무소 (kjhanlaw.com)
+# robots.txt — 한경재 법률사무소 (https://kjhanlaw.com/)
 
 # 기본값: 모든 크롤러 전체 허용
 User-agent: *

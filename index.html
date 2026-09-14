@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>한경재 법률사무소</title>
+<script>document.documentElement.className+=' js';</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{--navy:#07182f;--gold:#c9a45b;--cream:#f6f3eb;--ink:#111827;--muted:#697282;--line:#ddd7ca}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#e9e5dd;color:var(--ink);font-family:Pretendard,'Pretendard Variable',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:400}
+.page{max-width:1440px;margin:0 auto;background:#fff;box-shadow:0 20px 70px #0002}
+
+/* ---- hero : the one bold moment ---- */
+.nav{position:absolute;z-index:5;left:0;right:0;top:0;padding:29px 7%;display:flex;justify-content:space-between;align-items:center;color:#fff}
+.logo{font-size:14px;font-weight:500;letter-spacing:.02em}
+.nav-right{display:flex;gap:26px;font-size:11px;letter-spacing:.12em;color:#ffffff99}
+.hero{height:760px;position:relative;overflow:hidden;background:var(--navy);color:#fff}
+.hero img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.68)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#06152fe8 0%,#07182fa5 45%,#07182f20 100%),linear-gradient(0deg,#07182f55 0%,transparent 55%)}
+.hero-copy{position:absolute;z-index:2;left:7%;top:28%;max-width:760px}
+.eyebrow{font-size:11px;letter-spacing:.2em;color:#ddc17f;margin-bottom:26px;font-weight:400}
+.hero h1{font-size:clamp(38px,4.6vw,62px);line-height:1.28;letter-spacing:-.035em;font-weight:600;margin:0 0 26px}
+.hero p{font-size:16px;line-height:1.95;color:#dfe3e9;font-weight:400;max-width:540px;margin:0}
+.cta{display:inline-block;margin-top:34px;padding:15px 28px;border:1px solid #d8bc78;color:#f5e4b9;font-size:12px;letter-spacing:.08em;text-decoration:none;transition:background .2s,color .2s}
+.cta:hover,.cta:focus-visible{color:#07182f;border-color:#c9a45b}
+.hero-meta{position:absolute;z-index:2;left:7%;bottom:36px;font-size:10px;letter-spacing:.18em;color:#ffffff88}
+
+/* ---- sections : quiet ---- */
+.section{padding:110px 7%}
+.cream{background:var(--cream)}
+.split{display:grid;grid-template-columns:1fr 1.5fr;gap:100px}
+.kicker{font-size:10px;letter-spacing:.2em;color:#8a713d;font-weight:400}
+.section h2{font-size:34px;line-height:1.4;letter-spacing:-.025em;font-weight:400;margin:16px 0 0}
+.body{font-size:16px;line-height:2;color:#5b6470;font-weight:400;margin:0}
+.body + .body{margin-top:20px}
+.sign{margin-top:34px;font-size:15px;color:#3d4654;font-weight:500}
+
+/* ---- practice ---- */
+.practice{display:grid;grid-template-columns:repeat(3,1fr);margin-top:56px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pract{padding:44px 30px 50px;border-right:1px solid var(--line);min-height:250px;transition:background .35s ease}
+.pract:last-child{border-right:0}
+.pract h3{font-size:19px;margin:0 0 14px;letter-spacing:-.015em;font-weight:500}
+.pract .bar{width:22px;height:1px;background:var(--gold);margin-bottom:20px}
+.pract p{font-size:14px;line-height:1.9;color:#697282;margin:0}
+
+/* ---- credentials ---- */
+.dark{background:var(--navy);color:#fff}
+.dark .kicker{color:#d5b875}
+.dark .body{color:#c7ced8}
+.credentials{display:grid;grid-template-columns:1fr 1.35fr;gap:100px}
+.credential-list{border-top:1px solid #ffffff24}
+.credential{display:flex;justify-content:space-between;gap:30px;padding:18px 0;border-bottom:1px solid #ffffff18;font-size:13.5px;font-weight:400}
+.credential .year{color:#d8bb76;white-space:nowrap}
+
+/* ---- city break ---- */
+.city-break{height:430px;position:relative;overflow:hidden;background:var(--navy)}
+.city-break img{width:100%;height:100%;object-fit:cover;filter:saturate(.65)}
+.city-break:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#07182f66,#07182f1a)}
+
+/* ---- contact ---- */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:100px;background:var(--cream)}
+.contact h2{font-size:32px}
+.contact-info{font-size:15px;line-height:2.1;margin-top:32px}
+.contact-info a{color:var(--ink)}
+
+.footer{padding:30px 7%;display:flex;justify-content:space-between;gap:24px;font-size:10.5px;color:#7d8490;border-top:1px solid var(--line);flex-wrap:wrap}
+.disclaimer{padding:0 7% 34px;font-size:10.5px;line-height:1.9;color:#9aa0aa;max-width:900px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* ---- motion (only when JS is on; disabled for reduced-motion) ---- */
+.js .hero img{transform:scale(1.07);transition:transform 9s cubic-bezier(.16,.6,.3,1)}
+.js .hero.ready img{transform:scale(1)}
+.js .hero-copy > *{opacity:0;transform:translateY(18px)}
+.js .hero.ready .hero-copy > *{opacity:1;transform:none;transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1)}
+.js .hero.ready .hero-copy > *:nth-child(1){transition-delay:.12s}
+.js .hero.ready .hero-copy > *:nth-child(2),
+.js .hero.ready .hero-copy > *:nth-child(3){transition-delay:.28s}
+.js .hero.ready .hero-copy > *:nth-child(4){transition-delay:.5s}
+
+.js .split,.js .contact > div{opacity:0;transform:translateY(16px);transition:opacity .75s cubic-bezier(.22,.61,.36,1),transform .75s cubic-bezier(.22,.61,.36,1)}
+.js .in{opacity:1 !important;transform:none !important}
+
+
+/* staggered cards — they arrive one after another, not as a block */
+.js .practice .pract{opacity:0;transform:translateY(15px);transition:opacity .65s cubic-bezier(.22,.61,.36,1),transform .65s cubic-bezier(.22,.61,.36,1),background .35s ease}
+.js .practice.in .pract{opacity:1;transform:none}
+.js .practice.in .pract:nth-child(1){transition-delay:.04s}
+.js .practice.in .pract:nth-child(2){transition-delay:.15s}
+.js .practice.in .pract:nth-child(3){transition-delay:.26s}
+
+/* the gold rule draws itself */
+.js .practice .pract .bar{width:0}
+.js .practice.in .pract .bar{width:22px}
+.js .practice.in .pract:nth-child(1) .bar{transition-delay:.3s}
+.js .practice.in .pract:nth-child(2) .bar{transition-delay:.41s}
+.js .practice.in .pract:nth-child(3) .bar{transition-delay:.52s}
+
+/* credentials fall in line by line */
+.js .credentials > div:first-child{opacity:0;transform:translateY(15px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1)}
+.js .credentials.in > div:first-child{opacity:1;transform:none}
+.js .credentials .credential{opacity:0;transform:translateY(10px);transition:opacity .5s ease,transform .5s cubic-bezier(.22,.61,.36,1),border-color .3s ease}
+.js .credentials.in .credential{opacity:1;transform:none}
+.js .credentials.in .credential:nth-child(1){transition-delay:.10s}
+.js .credentials.in .credential:nth-child(2){transition-delay:.17s}
+.js .credentials.in .credential:nth-child(3){transition-delay:.24s}
+.js .credentials.in .credential:nth-child(4){transition-delay:.31s}
+.js .credentials.in .credential:nth-child(5){transition-delay:.38s}
+.js .credentials.in .credential:nth-child(6){transition-delay:.45s}
+.js .credentials.in .credential:nth-child(7){transition-delay:.52s}
+
+/* the interlude photo settles as it comes into view */
+.js .city-break img{transform:scale(1.1);transition:transform 1.8s cubic-bezier(.22,.61,.36,1)}
+.js .city-break.in img{transform:scale(1)}
+
+/* gold wipes across the button instead of snapping on */
+.cta{position:relative;overflow:hidden;z-index:0}
+.cta:before{content:"";position:absolute;inset:0;background:#c9a45b;transform:scaleX(0);transform-origin:left center;transition:transform .5s cubic-bezier(.22,.61,.36,1);z-index:-1}
+.cta:hover:before,.cta:focus-visible:before{transform:scaleX(1)}
+
+/* mail link */
+.contact-info a{text-decoration:none;background-image:linear-gradient(var(--gold),var(--gold));background-repeat:no-repeat;background-position:0 100%;background-size:0 1px;transition:background-size .4s cubic-bezier(.22,.61,.36,1)}
+.contact-info a:hover{background-size:100% 1px}
+
+/* compact bar after the hero scrolls away */
+.minibar{position:fixed;top:0;left:0;right:0;z-index:900;height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 7% 0 7%;background:rgba(7,24,47,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,164,91,.28);color:#fff;transform:translateY(-100%);transition:transform .45s cubic-bezier(.22,.61,.36,1)}
+.minibar.show{transform:none}
+.minibar .mb-name{font-size:13.5px;font-weight:500;letter-spacing:.01em}
+.minibar .mb-cta{margin-right:132px;font-size:12px;letter-spacing:.06em;color:#e8d5a8;text-decoration:none;border-bottom:1px solid rgba(232,213,168,.4);padding-bottom:2px}
+.minibar .mb-cta:hover{color:#fff;border-bottom-color:#fff}
+@media(max-width:800px){.minibar .mb-cta{margin-right:104px}.minibar{padding:0 5%}}
+
+.pract:hover{background:#faf8f3}
+.pract .bar{transition:width .4s cubic-bezier(.22,.61,.36,1)}
+.pract:hover .bar{width:56px}
+.credential{transition:border-color .3s ease}
+.credential:hover{border-bottom-color:#d8bb7688}
+
+
+/* ---- language ---- */
+.lang-switcher{position:fixed;top:18px;right:24px;z-index:9999;display:flex;padding:4px;border:1px solid rgba(255,255,255,.28);background:rgba(8,18,38,.82);backdrop-filter:blur(14px);border-radius:999px}
+.lang-switcher button{appearance:none;border:0;background:transparent;color:rgba(255,255,255,.62);font:500 12px/1 Pretendard,sans-serif;letter-spacing:.08em;padding:9px 13px;border-radius:999px;cursor:pointer}
+.lang-switcher button.active{color:#0b1934;background:#c9a96e}
+body[data-lang="ko"] [lang="en"]{display:none !important}
+body[data-lang="en"] [lang="ko"]{display:none !important}
+
+@media(max-width:800px){
+  .nav-right{display:none}
+  .hero{height:660px}
+  .hero-copy{top:24%}
+  .split,.credentials,.contact{grid-template-columns:1fr;gap:36px}
+  .practice{grid-template-columns:1fr}
+  .pract{border-right:0;border-bottom:1px solid var(--line)}
+  .pract:last-child{border-bottom:0}
+  .section{padding:72px 7%}
+  .city-break{height:360px}
+  .lang-switcher{top:12px;right:12px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto}
+  .js .hero-copy > *,.js .split,.js .contact > div,.js .practice .pract,.js .credentials > div,.js .credentials .credential{opacity:1!important;transform:none!important}
+  .js .practice .pract .bar{width:22px!important}
+  .js .city-break img,.minibar{transform:none!important}
+  .minibar{display:none}
+  .js .hero img{transform:none!important}}
+</style>
+</head>
+<body data-lang="ko">
+
+<div class="lang-switcher" role="group" aria-label="Language selection">
+  <button type="button" data-set-lang="ko">KOR</button>
+  <button type="button" data-set-lang="en">ENG</button>
+</div>
+
+<div class="minibar" id="minibar">
+  <span class="mb-name"><span lang="ko">한경재 법률사무소</span><span lang="en">HAN KYEONGJAE LAW OFFICE</span></span>
+  <a class="mb-cta" href="#contact"><span lang="ko">상담 문의</span><span lang="en">CONTACT</span></a>
+</div>
+
+<div class="page">
+
+<!-- HERO -->
+<section class="hero">
+  <nav class="nav">
+    <div class="logo">
+      <span lang="ko">한경재 법률사무소</span>
+      <span lang="en">HAN KYEONGJAE LAW OFFICE</span>
+    </div>
+    <div class="nav-right">
+      <span lang="ko">소개</span><span lang="en">ABOUT</span>
+      <span lang="ko">취급 분야</span><span lang="en">PRACTICE</span>
+      <span lang="ko">경력</span><span lang="en">EXPERIENCE</span>
+      <span lang="ko">상담</span><span lang="en">CONTACT</span>
+    </div>
+  </nav>
+  <img src="https://images.unsplash.com/photo-1538485399081-7c8975d2c4d1?auto=format&fit=crop&w=2400&q=88" alt="Seoul city">
+  <div class="hero-copy">
+    <div class="eyebrow">
+      <span lang="ko">한경재 · 변호사</span>
+      <span lang="en">HAN KYEONGJAE · ATTORNEY AT LAW</span>
+    </div>
+
+    <div lang="ko">
+      <h1>정확하게 보고,<br>분명하게 말씀드립니다.</h1>
+      <p>형사, 민사·행정, 스타트업 자문.</p>
+    </div>
+
+    <div lang="en">
+      <h1>Read it clearly.<br>Say it plainly.</h1>
+      <p>Criminal defense, civil and administrative matters,<br>and startup and corporate advice.</p>
+    </div>
+
+    <a class="cta" href="#contact">
+      <span lang="ko">상담 문의</span>
+      <span lang="en">REQUEST A CONSULTATION</span>
+    </a>
+  </div>
+  <div class="hero-meta">SEOUL · SONGPA</div>
+</section>
+
+<!-- 01 소개 -->
+<section class="section cream" id="about">
+  <div class="split" lang="ko">
+    <div><div class="kicker">01 / 소개</div><h2>변호사<br>한경재입니다.</h2></div>
+    <div>
+      <p class="body">안녕하십니까. 한경재 법률사무소 변호사 한경재입니다.</p>
+      <p class="body">제53회 사법시험에 합격하고 사법연수원 43기를 수료한 뒤, 민사·형사·행정 사건과 법률자문을 맡아 왔습니다. 서울특별시와 대법원 국선변호인, 대한변호사협회 스타트업 법률지원단으로도 일하고 있습니다.</p>
+      <p class="body">사건은 저마다 사실관계가 다릅니다. 쟁점을 앞세우기 전에 사실관계와 법적 구조를 먼저 정리하고, 의뢰인이 실제로 선택할 수 있는 방향을 말씀드립니다. 해외 거래나 투자와 얽힌 사건도 다룹니다.</p>
+      <p class="body">정리가 어려우시면 그대로 오셔도 됩니다. 함께 정리하는 것부터 시작하겠습니다.</p>
+      <div class="sign">변호사 한경재</div>
+    </div>
+  </div>
+
+  <div class="split" lang="en">
+    <div><div class="kicker">01 / ABOUT</div><h2>Kyeongjae Han,<br>Attorney at Law.</h2></div>
+    <div>
+      <p class="body">I am an attorney admitted in the Republic of Korea. I passed the 53rd Korean National Bar Examination and completed the 43rd class of the Judicial Research and Training Institute, and have since handled civil, criminal, and administrative matters alongside advisory work.</p>
+      <p class="body">I also serve as court-appointed defense counsel for the Seoul Metropolitan Government and the Supreme Court of Korea, and as a member of the Korean Bar Association Startup Legal Support Group.</p>
+      <p class="body">Every matter rests on its own facts. Before arguing the issues, I set out the facts and how the law applies to them, then explain the options that are actually open to you. My work also covers matters involving cross-border transactions and investment.</p>
+      <p class="body">If the facts are hard to organize, bring them as they are. Sorting them out is where we start.</p>
+      <div class="sign">Kyeongjae Han</div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 취급 분야 -->
+<section class="section" id="practice">
+  <div class="split" lang="ko">
+    <div><div class="kicker">02 / 취급 분야</div><h2>맡고 있는<br>사건들.</h2></div>
+    <div><p class="body">아래 세 분야를 중심으로 사건을 맡고 있습니다.</p></div>
+  </div>
+  <div class="split" lang="en">
+    <div><div class="kicker">02 / PRACTICE AREAS</div><h2>What I<br>work on.</h2></div>
+    <div><p class="body">My practice centers on the three areas below.</p></div>
+  </div>
+
+  <div class="practice">
+    <div class="pract">
+      <h3><span lang="ko">형사</span><span lang="en">Criminal defense</span></h3>
+      <div class="bar"></div>
+      <p lang="ko">수사 초기 대응부터 공판까지 맡습니다. 서울특별시와 대법원 국선변호인으로 쌓은 형사 실무가 바탕입니다.</p>
+      <p lang="en">From the first response at the investigation stage through trial, grounded in work as court-appointed defense counsel for the Seoul city government and the Supreme Court.</p>
+    </div>
+    <div class="pract">
+      <h3><span lang="ko">민사 · 행정</span><span lang="en">Civil &amp; administrative</span></h3>
+      <div class="bar"></div>
+      <p lang="ko">계약 분쟁과 손해배상, 행정처분에 대한 불복을 다룹니다. 소송 전 단계의 검토와 협상도 함께 진행합니다.</p>
+      <p lang="en">Contract disputes, damages claims, and appeals from administrative actions, including pre-litigation review and negotiation.</p>
+    </div>
+    <div class="pract">
+      <h3><span lang="ko">스타트업 · 기업</span><span lang="en">Startup &amp; corporate</span></h3>
+      <div class="bar"></div>
+      <p lang="ko">설립과 투자계약, 주주간 계약과 일상 자문을 맡습니다. 대한변호사협회 스타트업 법률지원단 활동을 이어오고 있습니다.</p>
+      <p lang="en">Incorporation, investment and shareholders' agreements, and ongoing corporate advice, continuing through the KBA Startup Legal Support Group.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CITY BREAK -->
+<section class="city-break">
+  <img src="https://images.unsplash.com/photo-1546874177-9e664107314e?auto=format&fit=crop&w=2400&q=88" alt="Seoul urban architecture">
+</section>
+
+<!-- 03 경력 -->
+<section class="section dark" id="experience">
+  <div class="credentials" lang="ko">
+    <div>
+      <div class="kicker">03 / 경력</div>
+      <h2>다양한 사건을 처리하며<br>쌓아온 경험.</h2>
+      <p class="body">법률사무소와 국선변호 현장에서 여러 사건을 다뤄 왔습니다.</p>
+    </div>
+    <div class="credential-list">
+      <div class="credential"><span>고려대학교 정치외교학과</span><span class="year">학사</span></div>
+      <div class="credential"><span>제53회 사법시험</span><span class="year">합격</span></div>
+      <div class="credential"><span>사법연수원 제43기</span><span class="year">수료</span></div>
+      <div class="credential"><span>서울특별시 국선변호인</span><span class="year">2016 – 현재</span></div>
+      <div class="credential"><span>대법원 국선변호인</span><span class="year">2017 – 현재</span></div>
+      <div class="credential"><span>대한변호사협회 스타트업 법률지원단</span><span class="year">2018 – 현재</span></div>
+      <div class="credential"><span>한경재 법률사무소</span><span class="year">2019 – 현재</span></div>
+    </div>
+  </div>
+
+  <div class="credentials" lang="en">
+    <div>
+      <div class="kicker">03 / EXPERIENCE</div>
+      <h2>Built on<br>the casework.</h2>
+      <p class="body">Experience across a range of matters, in private practice and in court-appointed defense.</p>
+    </div>
+    <div class="credential-list">
+      <div class="credential"><span>Korea University, B.A. Political Science &amp; International Relations</span><span class="year"></span></div>
+      <div class="credential"><span>53rd Korean National Bar Examination</span><span class="year">Passed</span></div>
+      <div class="credential"><span>Judicial Research and Training Institute, 43rd class</span><span class="year">Completed</span></div>
+      <div class="credential"><span>Court-appointed defense counsel, Seoul Metropolitan Government</span><span class="year">2016 – present</span></div>
+      <div class="credential"><span>Court-appointed defense counsel, Supreme Court of Korea</span><span class="year">2017 – present</span></div>
+      <div class="credential"><span>KBA Startup Legal Support Group</span><span class="year">2018 – present</span></div>
+      <div class="credential"><span>Han Kyeongjae Law Office</span><span class="year">2019 – present</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 상담 -->
+<section class="section contact" id="contact">
+  <div lang="ko">
+    <div class="kicker">04 / 상담</div>
+    <h2>무엇이 핵심인지부터<br>정리하겠습니다.</h2>
+    <p class="body" style="margin-top:24px">사건의 경위와 현재 상황을 간략히 정리해 메일로 보내주세요. 수임 전에는 비밀유지가 필요한 자료를 보내지 않으셔도 됩니다.</p>
+    <div class="contact-info">
+      <a href="mailto:info@kjhanlaw.com">info@kjhanlaw.com</a><br>
+      서울특별시 송파구 법원로 128 C동 1102-20호 (05854)
+    </div>
+  </div>
+  <div lang="en">
+    <div class="kicker">04 / CONTACT</div>
+    <h2>Let's start<br>with the facts.</h2>
+    <p class="body" style="margin-top:24px">Email a short summary of your situation and where it currently stands. Please do not send confidential or privileged information before we have agreed to act for you.</p>
+    <div class="contact-info">
+      <a href="mailto:info@kjhanlaw.com">info@kjhanlaw.com</a><br>
+      Block C, 1102-20, 128 Beobwon-ro, Songpa-gu, Seoul 05854, Korea
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span lang="ko">한경재 법률사무소 · 서울지방변호사회 소속 · 광고책임변호사 한경재</span>
+  <span lang="en">Han Kyeongjae Law Office · Member, Seoul Bar Association · Attorney responsible for advertising: Kyeongjae Han</span>
+  <span>© 2026 HAN KYEONGJAE</span>
+</footer>
+<div class="disclaimer">
+  <span lang="ko">이 사이트의 내용은 일반적인 정보 제공을 위한 것으로 개별 사건에 대한 법률 자문이 아닙니다. 사이트 방문이나 문의만으로는 변호사와 의뢰인의 관계가 성립하지 않으며, 수임계약을 체결한 때에 성립합니다. 비밀유지가 필요한 자료나 기한이 임박한 사안은 이 경로로 보내지 마시고, 먼저 상담 일정을 잡아 주십시오.</span>
+  <span lang="en">The information on this site is general in nature and is not legal advice. No attorney-client relationship is created by visiting this site or by sending an inquiry; it arises only under a signed engagement. Please do not send confidential or time-sensitive information through this site.</span>
+</div>
+
+</div>
+
+<script>
+(function () {
+  var TARGETS = '.split, .practice, .credentials, .city-break, .contact > div';
+  var buttons = document.querySelectorAll('[data-set-lang]');
+
+  function applyLang(lang){
+    document.body.dataset.lang = lang;
+    document.documentElement.lang = lang;
+    buttons.forEach(function(btn){
+      var active = btn.dataset.setLang === lang;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    // whatever the new language reveals is shown straight away, not re-animated
+    document.querySelectorAll(TARGETS).forEach(function(el){ el.classList.add('in'); });
+  }
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){ applyLang(btn.dataset.setLang); });
+  });
+  applyLang('ko');
+
+  // hero entrance
+  var hero = document.querySelector('.hero');
+  requestAnimationFrame(function(){ requestAnimationFrame(function(){ hero.classList.add('ready'); }); });
+
+  // compact bar appears once the hero is behind you
+  var minibar = document.getElementById('minibar');
+  var heroH = function(){ return hero.offsetHeight - 90; };
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      minibar.classList.toggle('show', window.scrollY > heroH());
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // scroll reveal, once per element
+  var items = document.querySelectorAll(TARGETS);
+  items.forEach(function(el){ el.classList.remove('in'); });
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+  items.forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+</body>
+</html>

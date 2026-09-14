@@ -9,19 +9,6 @@
   },
   "services": [
     {
-      "id": "criminal",
-      "name": "형사",
-      "name_en": "Criminal defense",
-      "description": "수사 초기 대응부터 공판까지 대리합니다. 서울특별시와 대법원 국선변호인으로 쌓은 형사 실무가 바탕입니다.",
-      "description_en": "From the first response at the investigation stage through trial, grounded in criminal practice built through court-appointed work for the Seoul Metropolitan Government and the Supreme Court.",
-      "scope": [
-        "수사 단계 조력",
-        "구속 및 영장 대응",
-        "공판 변론",
-        "피해자 대리"
-      ]
-    },
-    {
       "id": "civil-administrative",
       "name": "민사 · 행정",
       "name_en": "Civil & administrative",
@@ -35,23 +22,36 @@
       ]
     },
     {
-      "id": "startup-corporate",
-      "name": "스타트업 · 기업",
-      "name_en": "Startup & corporate",
-      "description": "설립과 투자계약, 주주간 계약과 일상 자문을 지원합니다. 대한변호사협회 스타트업 법률지원단 활동을 이어오고 있습니다.",
-      "description_en": "Incorporation, investment and shareholders' agreements, and ongoing corporate advice, continuing through the KBA Startup Legal Support Group.",
+      "id": "corporate-advisory",
+      "name": "기업 자문",
+      "name_en": "Corporate advisory",
+      "description": "법인 설립과 투자계약, 주주간 계약부터 일상적인 계약 검토까지 회사의 단계에 맞춰 자문합니다.",
+      "description_en": "Incorporation, investment and shareholders' agreements, and day-to-day contract review, matched to the stage the company is at.",
       "scope": [
         "법인 설립",
         "투자계약",
         "주주간 계약",
-        "일상 법률자문"
+        "일상 법률자문 및 계약 검토"
+      ]
+    },
+    {
+      "id": "cross-border",
+      "name": "국제 · 해외거래",
+      "name_en": "Cross-border",
+      "description": "국경을 넘는 거래와 투자, 외국 기업이나 개인이 당사자인 분쟁을 다룹니다. 영문 계약 검토와 해외 대리인과의 협업도 함께합니다.",
+      "description_en": "Cross-border transactions and investment, and disputes involving foreign parties, including English-language contract review and coordination with counsel abroad.",
+      "scope": [
+        "국경 간 거래 및 투자",
+        "외국 당사자가 얽힌 분쟁",
+        "영문 계약 검토",
+        "해외 대리인과의 협업"
       ]
     }
   ],
   "clients": [
-    "형사 절차에 놓인 개인",
     "계약 분쟁 및 행정처분 당사자",
-    "초기 단계의 스타트업 및 기업"
+    "법률자문이 필요한 기업",
+    "국경 간 거래나 해외투자 당사자"
   ],
   "intake": {
     "channel": "email",

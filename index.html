@@ -90,6 +90,14 @@
       ],
       "publisher": {
         "@id": "https://kjhanlaw.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://kjhanlaw.com/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
       }
     }
   ]
@@ -110,6 +118,9 @@ body{margin:0;background:#e9e5dd;color:var(--ink);font-family:Pretendard,'Preten
 .logo{font-size:14px;font-weight:500;letter-spacing:.02em}
 .logo [lang="en"]{text-transform:uppercase;letter-spacing:.1em}
 .nav-right{display:flex;gap:26px;font-size:11px;letter-spacing:.12em;color:#ffffff99;margin-right:152px}
+.nav-right a{color:inherit;text-decoration:none;transition:color .2s}
+.nav-right a:hover{color:#fff}
+.nav-right a:focus-visible,.lang-switcher button:focus-visible,.cta:focus-visible,.mb-cta:focus-visible{outline:2px solid #d8bc78;outline-offset:3px}
 .hero{height:760px;position:relative;overflow:hidden;background:var(--navy);color:#fff}
 .hero img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.68)}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#06152fe8 0%,#07182fa5 45%,#07182f20 100%),linear-gradient(0deg,#07182f55 0%,transparent 55%)}
@@ -262,9 +273,9 @@ body[data-lang="en"] [lang="ko"]{display:none !important}
 </head>
 <body data-lang="ko">
 
-<div class="lang-switcher" role="group" aria-label="Language selection">
-  <button type="button" data-set-lang="ko">KOR</button>
-  <button type="button" data-set-lang="en">ENG</button>
+<div class="lang-switcher" id="lang-switcher" role="group" aria-label="언어 선택">
+  <button type="button" data-set-lang="ko" aria-label="한국어로 보기">KOR</button>
+  <button type="button" data-set-lang="en" aria-label="View in English">ENG</button>
 </div>
 
 <div class="minibar" id="minibar">
@@ -276,16 +287,16 @@ body[data-lang="en"] [lang="ko"]{display:none !important}
 
 <!-- HERO -->
 <section class="hero">
-  <nav class="nav">
+  <nav class="nav" aria-label="주요 메뉴">
     <div class="logo">
       <span lang="ko">한경재 법률사무소</span>
       <span lang="en">Han Kyeongjae Law Office</span>
     </div>
     <div class="nav-right">
-      <span lang="ko">소개</span><span lang="en">ABOUT</span>
-      <span lang="ko">취급 분야</span><span lang="en">PRACTICE</span>
-      <span lang="ko">경력</span><span lang="en">EXPERIENCE</span>
-      <span lang="ko">상담</span><span lang="en">CONTACT</span>
+      <a href="#about"><span lang="ko">소개</span><span lang="en">ABOUT</span></a>
+      <a href="#practice"><span lang="ko">취급 분야</span><span lang="en">PRACTICE</span></a>
+      <a href="#experience"><span lang="ko">경력</span><span lang="en">EXPERIENCE</span></a>
+      <a href="#contact"><span lang="ko">상담</span><span lang="en">CONTACT</span></a>
     </div>
   </nav>
   <img src="assets/hero-seoul-1440.jpg"
@@ -455,9 +466,18 @@ body[data-lang="en"] [lang="ko"]{display:none !important}
   var TARGETS = '.split, .practice, .credentials, .city-break, .contact > div';
   var buttons = document.querySelectorAll('[data-set-lang]');
 
+  var A11Y = {
+    ko: { nav: '주요 메뉴', group: '언어 선택' },
+    en: { nav: 'Primary',   group: 'Language selection' }
+  };
+  var navEl = document.querySelector('.nav');
+  var groupEl = document.getElementById('lang-switcher');
+
   function applyLang(lang){
     document.body.dataset.lang = lang;
     document.documentElement.lang = lang;
+    navEl.setAttribute('aria-label', A11Y[lang].nav);
+    groupEl.setAttribute('aria-label', A11Y[lang].group);
     buttons.forEach(function(btn){
       var active = btn.dataset.setLang === lang;
       btn.classList.toggle('active', active);

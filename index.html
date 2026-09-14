@@ -171,7 +171,9 @@ body{margin:0;background:#e9e5dd;color:var(--ink);font-family:Pretendard,'Preten
 .contact-info a{color:var(--ink)}
 
 .footer{padding:30px 7%;display:flex;justify-content:space-between;gap:24px;font-size:10.5px;color:#7d8490;border-top:1px solid var(--line);flex-wrap:wrap}
-.disclaimer{padding:0 7% 34px;font-size:10.5px;line-height:1.9;color:#9aa0aa;max-width:900px}
+.disclaimer{padding:0 7% 14px;font-size:10.5px;line-height:1.9;color:#9aa0aa;max-width:900px}
+.wip{display:flex;align-items:flex-start;gap:8px;padding:0 7% 34px;font-size:10.5px;line-height:1.9;color:#9aa0aa;max-width:900px}
+.wip svg{flex:0 0 auto;width:13px;height:13px;margin-top:4px;color:var(--gold)}
 a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
 /* ---- motion (only when JS is on; disabled for reduced-motion) ---- */
@@ -457,6 +459,14 @@ body[data-lang="en"] [lang="ko"]{display:none !important}
 <div class="disclaimer">
   <span lang="ko">이 사이트의 내용은 일반적인 정보 제공을 위한 것으로 개별 사건에 대한 법률 자문이 아닙니다. 사이트 방문이나 문의만으로는 변호사와 의뢰인의 관계가 성립하지 않으며, 수임계약을 체결한 때에 성립합니다. 비밀유지가 필요한 자료나 기한이 임박한 사안은 이 경로로 보내지 마시고, 먼저 상담 일정을 잡아 주십시오.</span>
   <span lang="en">The information on this site is general in nature and is not legal advice. No attorney-client relationship is created by visiting this site or by sending an inquiry; it arises only under a signed engagement. Please do not send confidential or time-sensitive information through this site.</span>
+</div>
+<div class="wip">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <path d="M12 9v4"/><path d="M12 17h.01"/>
+    <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/>
+  </svg>
+  <span lang="ko">현재 사이트를 개발·개선하는 중입니다. 일부 내용은 아직 정확하지 않거나 변경될 수 있으니 참고용으로만 보아 주시고, 정확한 사항은 직접 문의해 주십시오.</span>
+  <span lang="en">This site is under development. Some information is still being revised and may be inaccurate or subject to change &mdash; please treat it as provisional and contact us directly to confirm any details.</span>
 </div>
 
 </div>

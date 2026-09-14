@@ -1,0 +1,46 @@
+# robots.txt — 한경재 법률사무소 (kjhanlaw.com)
+
+# 기본값: 모든 크롤러 전체 허용
+User-agent: *
+Allow: /
+
+# ---- AI 검색 / 답변 엔진 크롤러 : 명시적 허용 ----
+
+# OpenAI
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google (Gemini / AI Overviews 학습·그라운딩)
+User-agent: Google-Extended
+Allow: /
+
+# Apple (Apple Intelligence)
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (다수 AI 데이터셋의 원본)
+User-agent: CCBot
+Allow: /

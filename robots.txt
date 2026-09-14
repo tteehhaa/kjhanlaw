@@ -44,3 +44,6 @@ Allow: /
 # Common Crawl (다수 AI 데이터셋의 원본)
 User-agent: CCBot
 Allow: /
+
+# 사이트맵
+Sitemap: https://kjhanlaw.com/sitemap.xml

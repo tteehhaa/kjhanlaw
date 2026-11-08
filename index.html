@@ -150,6 +150,14 @@ body{margin:0;background:#e9e5dd;color:var(--ink);font-family:Pretendard,'Preten
 .pract .bar{width:22px;height:1px;background:var(--gold);margin-bottom:20px}
 .pract p{font-size:14px;line-height:1.9;color:#697282;margin:0}
 
+/* ---- service band (RecoverKR) ---- */
+.svc{display:flex;align-items:center;justify-content:space-between;gap:32px;margin-top:40px;padding:30px 34px;background:var(--navy);color:#fff;text-decoration:none;transition:background .3s ease}
+.svc:hover{background:#0c2442}
+.svc .svc-k{font-size:12px;letter-spacing:.14em;color:#d5b875;text-transform:uppercase}
+.svc h3{font-size:19px;font-weight:500;letter-spacing:-.015em;margin:10px 0 6px;color:#fff}
+.svc p{font-size:14px;line-height:1.8;color:#c7ced8;margin:0}
+.svc .svc-go{flex:none;font-size:14px;color:#d5b875;border-bottom:1px solid #d5b87566;padding-bottom:2px;white-space:nowrap}
+
 /* ---- credentials ---- */
 .dark{background:var(--navy);color:#fff}
 .dark .kicker{color:#d5b875}
@@ -265,6 +273,7 @@ body[data-lang="en"] [lang="ko"]{display:none !important}
   .practice{grid-template-columns:1fr}
   .pract{border-right:0;border-bottom:1px solid var(--line)}
   .pract:last-child{border-bottom:0}
+  .svc{flex-direction:column;align-items:flex-start;gap:18px;padding:26px 24px}
   .section{padding:72px 7%}
   .city-break{height:360px}
   .lang-switcher{top:12px;right:12px}
@@ -385,6 +394,16 @@ body[data-lang="en"] [lang="ko"]{display:none !important}
       <p lang="en">Cross-border transactions and investment, and disputes involving foreign parties, including English-language contract review and coordination with counsel abroad.</p>
     </div>
   </div>
+
+  <a class="svc" href="https://www.recoverkr.com" target="_blank" rel="noopener">
+    <div>
+      <div class="svc-k">Service · RecoverKR</div>
+      <h3><span lang="ko">해외 채권자를 위한 국내 채권 회수</span><span lang="en">Debt recovery in Korea for creditors abroad</span></h3>
+      <p lang="ko">한국 기업으로부터 대금을 받지 못한 해외 기업을 위해 채무자 조사, 독촉장, 지급명령·소송까지 진행합니다. 영어로 접수하고 진행 상황을 확인할 수 있습니다.</p>
+      <p lang="en">For foreign companies owed money by a Korean business: debtor checks, demand letters, and payment orders or lawsuits, handled in English with case tracking online.</p>
+    </div>
+    <span class="svc-go"><span lang="ko">recoverkr.com 바로가기 →</span><span lang="en">Visit recoverkr.com →</span></span>
+  </a>
 </section>
 
 <!-- CITY BREAK -->

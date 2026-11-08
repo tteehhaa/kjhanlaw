@@ -10,6 +10,10 @@
 - [경력](https://kjhanlaw.com/#experience): 학력과 자격, 법무법인 근무 이력, 공익변호사·국선변호인·고문변호사 등 공직 위촉 이력.
 - [상담](https://kjhanlaw.com/#contact): 상담 요청 방법, 이메일 주소, 사무소 위치.
 
+## 관련 서비스
+
+- [RecoverKR](https://www.recoverkr.com/): 이 사무소가 운영하는 해외 채권자 대상 국내 채권 회수 서비스(영문). 채무자 조사, 독촉장, 지급명령·소송.
+
 ## 구조화 데이터
 
 - [sitemap.xml](https://kjhanlaw.com/sitemap.xml): 색인 대상 URL 목록.

@@ -46,6 +46,20 @@
         "영문 계약 검토",
         "해외 대리인과의 협업"
       ]
+    },
+    {
+      "id": "debt-recovery-recoverkr",
+      "name": "해외 채권자 대상 국내 채권 회수 (RecoverKR)",
+      "name_en": "Debt recovery in Korea for creditors abroad (RecoverKR)",
+      "url": "https://www.recoverkr.com/",
+      "description": "한국 기업으로부터 대금을 받지 못한 해외 기업을 위해 채무자 조사, 독촉장, 지급명령·소송까지 진행합니다.",
+      "description_en": "For foreign companies owed money by a Korean business: debtor checks, demand letters, and payment orders or lawsuits, handled in English.",
+      "scope": [
+        "채무자 조사",
+        "독촉장(내용증명) 발송·협상",
+        "지급명령",
+        "소송"
+      ]
     }
   ],
   "clients": [
